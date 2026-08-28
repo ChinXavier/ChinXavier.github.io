@@ -1,5 +1,5 @@
 /* ========================================
-   RESET & BASE
+   RESET
 ======================================== */
 
 * {
@@ -8,9 +8,11 @@
     box-sizing: border-box;
 }
 
+
 html {
     scroll-behavior: smooth;
 }
+
 
 body {
     font-family:
@@ -23,6 +25,7 @@ body {
         sans-serif;
 
     background: #0a0a0a;
+
     color: #f5f5f5;
 
     line-height: 1.6;
@@ -30,9 +33,11 @@ body {
     overflow-x: hidden;
 }
 
+
 a {
     color: inherit;
 }
+
 
 ::selection {
     background: #ffffff;
@@ -46,8 +51,10 @@ a {
 
 .container {
     width: min(1100px, 90%);
+
     margin: 0 auto;
 }
+
 
 section {
     padding: 130px 0;
@@ -68,7 +75,7 @@ section {
 
     z-index: 1000;
 
-    background: rgba(10, 10, 10, 0.82);
+    background: rgba(10, 10, 10, 0.84);
 
     backdrop-filter: blur(14px);
 
@@ -77,8 +84,10 @@ section {
     border-bottom: 1px solid #202020;
 }
 
+
 .nav-container {
     width: min(1100px, 90%);
+
     height: 72px;
 
     margin: 0 auto;
@@ -90,6 +99,7 @@ section {
     justify-content: space-between;
 }
 
+
 .logo {
     text-decoration: none;
 
@@ -98,21 +108,17 @@ section {
     font-weight: 700;
 
     letter-spacing: -0.04em;
-
-    transition: opacity 0.2s ease;
 }
 
-.logo:hover {
-    opacity: 0.65;
-}
 
 .nav-links {
     display: flex;
 
     align-items: center;
 
-    gap: 28px;
+    gap: 27px;
 }
+
 
 .nav-links a {
     text-decoration: none;
@@ -121,12 +127,32 @@ section {
 
     font-size: 13px;
 
-    transition:
-        color 0.2s ease;
+    transition: color 0.2s ease;
 }
+
 
 .nav-links a:hover {
     color: #ffffff;
+}
+
+
+.nav-links .language-switch {
+    margin-left: 8px;
+
+    padding-left: 18px;
+
+    border-left: 1px solid #333;
+
+    color: #aaa;
+
+    font-family: monospace;
+
+    font-size: 12px;
+}
+
+
+.nav-links .language-switch:hover {
+    color: #fff;
 }
 
 
@@ -146,11 +172,13 @@ section {
     border-bottom: 1px solid #202020;
 }
 
+
 .hero-content {
     width: min(1100px, 90%);
 
     margin: 0 auto;
 }
+
 
 .eyebrow {
     margin-bottom: 28px;
@@ -164,8 +192,9 @@ section {
     letter-spacing: 0.22em;
 }
 
+
 .hero h1 {
-    margin-bottom: 15px;
+    margin-bottom: 18px;
 
     font-size: clamp(64px, 10vw, 125px);
 
@@ -174,12 +203,13 @@ section {
     letter-spacing: -0.075em;
 }
 
+
 .hero h2 {
     max-width: 900px;
 
-    margin-bottom: 38px;
+    margin-bottom: 35px;
 
-    font-size: clamp(30px, 4.5vw, 58px);
+    font-size: clamp(32px, 4.5vw, 58px);
 
     line-height: 1.05;
 
@@ -190,21 +220,58 @@ section {
     color: #eeeeee;
 }
 
+
 .hero h2 span {
-    color: #666666;
+    color: #666;
 }
 
-.hero-description {
-    max-width: 650px;
 
-    margin-bottom: 40px;
+.hero-description {
+    max-width: 680px;
+
+    margin-bottom: 28px;
 
     color: #888;
 
     font-size: 18px;
 
-    line-height: 1.8;
+    line-height: 1.9;
 }
+
+
+/* ========================================
+   HERO TECH TAGS
+======================================== */
+
+.hero-tech {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-bottom: 35px;
+}
+
+
+.hero-tech span {
+    padding: 6px 10px;
+
+    border: 1px solid #292929;
+
+    border-radius: 3px;
+
+    color: #777;
+
+    font-family: monospace;
+
+    font-size: 11px;
+}
+
+
+/* ========================================
+   BUTTONS
+======================================== */
 
 .hero-buttons {
     display: flex;
@@ -215,6 +282,7 @@ section {
 
     flex-wrap: wrap;
 }
+
 
 .button {
     display: inline-block;
@@ -235,9 +303,11 @@ section {
         border-color 0.2s ease;
 }
 
+
 .button:hover {
     transform: translateY(-2px);
 }
+
 
 .button.primary {
     background: #ffffff;
@@ -245,41 +315,44 @@ section {
     color: #000000;
 }
 
+
 .button.primary:hover {
     background: #d8d8d8;
 }
 
+
 .button.secondary {
-    border: 1px solid #333333;
+    border: 1px solid #333;
 
     color: #eeeeee;
 }
 
+
 .button.secondary:hover {
     background: #151515;
 
-    border-color: #555555;
+    border-color: #555;
 }
 
 
 /* ========================================
-   SECTION TYPOGRAPHY
+   SECTION TITLES
 ======================================== */
 
 .section-label {
     margin-bottom: 18px;
 
-    color: #555555;
+    color: #555;
 
     font-size: 11px;
 
     font-weight: 700;
 
-    letter-spacing: 0.2em;
+    letter-spacing: 0.18em;
 }
 
-.container > h2,
-.section-heading h2 {
+
+.container > h2 {
     margin-bottom: 55px;
 
     font-size: clamp(40px, 6vw, 68px);
@@ -306,19 +379,22 @@ section {
     align-items: start;
 }
 
+
 .about-main {
     max-width: 720px;
 }
 
+
 .about-main p {
     margin-bottom: 24px;
 
-    color: #888888;
+    color: #888;
 
     font-size: 16px;
 
-    line-height: 1.85;
+    line-height: 1.9;
 }
+
 
 .about-main .large-text {
     margin-bottom: 30px;
@@ -327,14 +403,16 @@ section {
 
     font-size: 25px;
 
-    line-height: 1.45;
+    line-height: 1.5;
 
     letter-spacing: -0.025em;
 }
 
+
 .about-side {
     border-top: 1px solid #292929;
 }
+
 
 .info-item {
     padding: 20px 0;
@@ -342,24 +420,24 @@ section {
     border-bottom: 1px solid #292929;
 }
 
+
 .info-item span {
     display: block;
 
     margin-bottom: 7px;
 
-    color: #555555;
+    color: #555;
 
     font-size: 10px;
 
     font-weight: 700;
 
     letter-spacing: 0.15em;
-
-    text-transform: uppercase;
 }
 
+
 .info-item strong {
-    color: #cccccc;
+    color: #ccc;
 
     font-size: 14px;
 
@@ -377,6 +455,7 @@ section {
     border-bottom: 1px solid #202020;
 }
 
+
 .skills-grid {
     display: grid;
 
@@ -390,6 +469,7 @@ section {
     border: 1px solid #2b2b2b;
 }
 
+
 .skill-card {
     min-height: 185px;
 
@@ -397,38 +477,41 @@ section {
 
     background: #0a0a0a;
 
-    transition:
-        background 0.25s ease;
+    transition: background 0.25s ease;
 }
+
 
 .skill-card:hover {
     background: #131313;
 }
+
 
 .skill-number {
     display: block;
 
     margin-bottom: 30px;
 
-    color: #444444;
+    color: #444;
 
     font-size: 11px;
 
     font-family: monospace;
 }
 
+
 .skill-card h3 {
     margin-bottom: 12px;
 
-    color: #eeeeee;
+    color: #eee;
 
     font-size: 18px;
 
     letter-spacing: -0.02em;
 }
 
+
 .skill-card p {
-    color: #666666;
+    color: #666;
 
     font-size: 13px;
 }
@@ -446,6 +529,7 @@ section {
 
     gap: 18px;
 }
+
 
 .project-card {
     min-height: 430px;
@@ -466,6 +550,7 @@ section {
         background 0.25s ease;
 }
 
+
 .project-card:hover {
     transform: translateY(-5px);
 
@@ -473,6 +558,7 @@ section {
 
     background: #0f0f0f;
 }
+
 
 .project-top {
     display: flex;
@@ -484,16 +570,18 @@ section {
     margin-bottom: 50px;
 }
 
+
 .project-number {
-    color: #555555;
+    color: #555;
 
     font-family: monospace;
 
     font-size: 12px;
 }
 
+
 .project-type {
-    color: #555555;
+    color: #555;
 
     font-size: 9px;
 
@@ -502,31 +590,35 @@ section {
     letter-spacing: 0.15em;
 }
 
+
 .project-content {
     margin-top: auto;
 }
 
+
 .project-card h3 {
     margin-bottom: 20px;
 
-    color: #eeeeee;
+    color: #eee;
 
     font-size: 28px;
 
-    line-height: 1.05;
+    line-height: 1.15;
 
     letter-spacing: -0.04em;
 }
 
+
 .project-card p {
     margin-bottom: 28px;
 
-    color: #777777;
+    color: #777;
 
     font-size: 13px;
 
-    line-height: 1.7;
+    line-height: 1.75;
 }
+
 
 .project-tags {
     display: flex;
@@ -537,8 +629,9 @@ section {
 
     padding-top: 22px;
 
-    border-top: 1px solid #222222;
+    border-top: 1px solid #222;
 }
+
 
 .project-tags span {
     padding: 5px 8px;
@@ -547,7 +640,7 @@ section {
 
     border-radius: 3px;
 
-    color: #666666;
+    color: #666;
 
     font-size: 10px;
 }
@@ -560,6 +653,7 @@ section {
 #education {
     border-top: 1px solid #202020;
 }
+
 
 .education-card {
     padding: 38px;
@@ -577,46 +671,51 @@ section {
     background: #0d0d0d;
 }
 
+
 .education-year {
     display: block;
 
     margin-bottom: 15px;
 
-    color: #555555;
+    color: #555;
 
     font-family: monospace;
 
     font-size: 12px;
 }
 
+
 .education-card h3 {
     margin-bottom: 8px;
 
-    color: #eeeeee;
+    color: #eee;
 
     font-size: 26px;
 
     letter-spacing: -0.03em;
 }
 
+
 .education-card p {
-    color: #777777;
+    color: #777;
 
     font-size: 14px;
 }
 
+
 .education-detail {
     padding-left: 30px;
 
-    border-left: 1px solid #333333;
+    border-left: 1px solid #333;
 }
+
 
 .education-detail span {
     display: block;
 
     margin-bottom: 8px;
 
-    color: #555555;
+    color: #555;
 
     font-size: 9px;
 
@@ -625,8 +724,9 @@ section {
     letter-spacing: 0.16em;
 }
 
+
 .education-detail strong {
-    color: #aaaaaa;
+    color: #aaa;
 
     font-size: 13px;
 
@@ -646,6 +746,7 @@ section {
     border-top: 1px solid #202020;
 }
 
+
 #contact h2 {
     margin-bottom: 30px;
 
@@ -656,15 +757,17 @@ section {
     letter-spacing: -0.07em;
 }
 
+
 .section-text {
     max-width: 600px;
 
-    color: #777777;
+    color: #777;
 
     font-size: 17px;
 
     line-height: 1.8;
 }
+
 
 .contact-links {
     display: flex;
@@ -674,12 +777,13 @@ section {
     margin-top: 40px;
 }
 
+
 .contact-links a {
     padding-bottom: 5px;
 
-    border-bottom: 1px solid #444444;
+    border-bottom: 1px solid #444;
 
-    color: #eeeeee;
+    color: #eee;
 
     text-decoration: none;
 
@@ -690,10 +794,11 @@ section {
         color 0.2s ease;
 }
 
-.contact-links a:hover {
-    border-color: #ffffff;
 
-    color: #ffffff;
+.contact-links a:hover {
+    border-color: #fff;
+
+    color: #fff;
 }
 
 
@@ -732,21 +837,26 @@ footer {
         display: none;
     }
 
+
     section {
         padding: 90px 0;
     }
+
 
     .hero {
         min-height: 90vh;
     }
 
+
     .hero h1 {
         font-size: clamp(60px, 17vw, 95px);
     }
 
+
     .hero h2 {
         font-size: clamp(30px, 8vw, 48px);
     }
+
 
     .about-grid {
         grid-template-columns: 1fr;
@@ -754,17 +864,21 @@ footer {
         gap: 50px;
     }
 
+
     .skills-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
 
     .projects-grid {
         grid-template-columns: 1fr;
     }
 
+
     .project-card {
         min-height: 380px;
     }
+
 
     .education-card {
         flex-direction: column;
@@ -772,23 +886,26 @@ footer {
         align-items: flex-start;
     }
 
+
     .education-detail {
+        width: 100%;
+
         padding-left: 0;
 
         padding-top: 20px;
 
         border-left: none;
 
-        border-top: 1px solid #333333;
-
-        width: 100%;
+        border-top: 1px solid #333;
     }
+
 
     #contact {
         padding-top: 100px;
 
         padding-bottom: 110px;
     }
+
 
     footer {
         flex-direction: column;
@@ -809,19 +926,33 @@ footer {
         width: 88%;
     }
 
+
     .skills-grid {
         grid-template-columns: 1fr;
     }
+
 
     .skill-card {
         min-height: 150px;
     }
 
+
     .project-card {
         padding: 25px;
     }
 
+
     .education-card {
         padding: 25px;
+    }
+
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+
+    .about-main .large-text {
+        font-size: 21px;
     }
 }
